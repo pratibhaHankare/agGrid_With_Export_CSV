@@ -1,0 +1,27 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1>
+     {{ title }}!
+  </h1>
+  <button style="float:left;"(click)="getData()">Get First Title Name</button><br/>
+  <button (click)="onBtExport()">Export to CSV</button>
+</div>
+<br/>
+  <!-- table  -->
+  <ag-grid-angular
+    style="width:1000px; height:600px;"
+    class="ag-theme-balham"
+    [columnDefs]="columnDefs"
+    [enableSorting]= "true"
+    [enableFilter]= "true"
+    [floatingFilter]="true"
+    [animateRows]="true"
+    [pagination]="true"
+    [paginationAutoPageSize]="true"
+    [sortingOrder]="sortingOrder"
+    [rowDragManaged]="true"
+    [enableColResize]="true"
+    (gridReady)="onGridReady($event)"
+  ></ag-grid-angular>
+
+
